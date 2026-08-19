@@ -1,0 +1,9 @@
+{% if download_list %}
+  <ul>
+    {% for download in download_list %}
+      <li><a href="{% url 'downloads:detail' download.id %}">{{ download.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No downloads.</p>
+ {% endif %}

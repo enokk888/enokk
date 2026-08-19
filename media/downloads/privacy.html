@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Paws</title>
+    <style>
+        :root {
+            --bg-body: #000000;
+            --bg-card: #1c1c1e;
+            --ios-blue: #0A84FF;
+            --ios-gray-text: #8e8e93;
+            --text-primary: #ffffff;
+            --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            font-family: var(--font-stack);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            color: var(--ios-gray-text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .main-content {
+            padding-top: 140px;
+            flex: 1;
+            padding-bottom: 80px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .last-updated {
+            color: var(--ios-gray-text);
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+        }
+
+        .policy-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .policy-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            color: var(--text-primary);
+        }
+
+        .policy-section p {
+            color: var(--ios-gray-text);
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .policy-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--ios-gray-text);
+        }
+
+        .policy-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .callout {
+            border-left: 3px solid var(--ios-blue);
+            padding: 12px 16px;
+            margin: 16px 0;
+            background: rgba(10, 132, 255, 0.08);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #666;
+            margin: 0 10px;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <a href="/" class="nav-logo">Paws</a>
+            <a href="/" class="nav-link">Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <h1>Privacy Policy</h1>
+        <div class="last-updated">Last updated: 16 August 2026</div>
+
+        <div class="policy-section">
+            <p><strong>Paws</strong> (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how the Paws iOS app collects, uses, stores, and shares information.</p>
+            <p>By using Paws, you agree to the practices described in this policy.</p>
+            <div class="callout">
+                <p><strong>Important:</strong> Paws is a pet-care information assistant. It is not a veterinarian and does not provide medical diagnosis or emergency care. Always consult a licensed veterinarian for medical decisions.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <h2>1. Data on this device</h2>
+            <p>Paws stores pet profiles, medical records, photos, documents, reminders, and AI chat transcripts locally on your iPhone or iPad using <strong>SwiftData</strong>.</p>
+            <ul>
+                <li><strong>Local by default:</strong> We do not run a central database of your pets. Your data stays on your device unless you choose to share it as described below.</li>
+                <li><strong>Other devices:</strong> Pets are not automatically copied to your other Apple devices. Uninstalling Paws permanently deletes the local copy on that device.</li>
+                <li><strong>Device backup:</strong> If you use an encrypted iPhone backup (iCloud or computer), Apple may include app data in that backup under Apple&rsquo;s own privacy policy. We do not have access to your backups.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>2. iCloud collaboration (live sharing)</h2>
+            <p>If you invite someone to collaborate on a pet profile, Paws uses <strong>Apple CloudKit</strong> in the container <code>iCloud.com.pawsdev</code> to share a live copy of that pet with the people you invite.</p>
+            <p><strong>What is shared</strong> when you share a pet profile:</p>
+            <ul>
+                <li>Pet profile details and photo</li>
+                <li>Medical records</li>
+                <li>Medicines, vaccinations, weight entries, and habits</li>
+                <li>Attached documents and text extracted from those documents (OCR)</li>
+            </ul>
+            <p><strong>What is not shared:</strong> AI chat transcripts stay on the device that created them and are not part of the CloudKit share.</p>
+            <p>You can stop sharing or leave a shared profile from the pet screen in the app. When access is revoked, collaborators lose live access to that shared data.</p>
+            <p>People you invite may use the in-app assistant on shared pet data unless they only have read-only access. Document excerpts looked up by the assistant can be sent to our AI proxy as described in section 4.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>3. Profile file copies (.pawsshare)</h2>
+            <p>Separately from live CloudKit sharing, Paws can export or import a <strong>snapshot file</strong> of a pet profile (including medical data and extracted document text). This is a one-time copy, not live sync. Importing a file creates or updates a local pet on the device that imports it.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>4. Document processing on device</h2>
+            <p>When you attach medical documents or photos:</p>
+            <ul>
+                <li><strong>On-device extraction:</strong> Paws uses Apple&rsquo;s <strong>Vision</strong> framework to extract text from images and PDFs on your device.</li>
+                <li><strong>Images stay local:</strong> Original image files are not uploaded to our servers for OCR. Only extracted text stored in the app (and shared through collaboration when applicable) may be used by features such as the assistant.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>5. AI assistant (Ask)</h2>
+            <p>When you use <strong>Ask</strong>, Paws sends:</p>
+            <ul>
+                <li>Your question</li>
+                <li>A snapshot of the selected pet (for example name, species, medications, allergies, and relevant records)</li>
+                <li>Any document excerpts the assistant looks up during that conversation</li>
+            </ul>
+            <p>These requests go to a <strong>Cloudflare Worker</strong> proxy (<code>paws.keal-selen.workers.dev</code>), which forwards them to a large language model provider (currently <strong>OpenAI</strong>). Communication uses TLS encryption.</p>
+            <p>We use API terms that, to our knowledge, do not use your prompts to train public models. The assistant is for informational pet-care support only &mdash; not veterinary diagnosis, treatment, or emergencies.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>6. Widgets and App Group</h2>
+            <p>Paws widgets read a small snapshot of pet data (names, photos, upcoming care items) from a shared <strong>App Group</strong> container on your device (<code>group.com.pawsdev</code>). This data stays on the device and is used only to display widgets. Shared pets you accept may appear in that snapshot.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>7. Notifications</h2>
+            <p>Medicine and vaccination reminders are scheduled locally on your device with Apple&rsquo;s <strong>UserNotifications</strong> framework. Reminder scheduling does not require our servers.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>8. Purchases</h2>
+            <p>Subscriptions are sold through Apple&rsquo;s App Store. <strong>RevenueCat</strong> helps us verify your subscription status on this device. We do not receive your full payment card details &mdash; Apple processes payment.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>9. What we do not do</h2>
+            <ul>
+                <li>We do not use App Tracking Transparency frameworks to track you across other companies&rsquo; apps or websites.</li>
+                <li>We do not sell your personal information.</li>
+                <li>We do not embed third-party advertising or analytics SDKs in the app for behavioral tracking.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>10. Security</h2>
+            <ul>
+                <li><strong>iOS sandbox:</strong> The app runs within Apple&rsquo;s standard app sandbox.</li>
+                <li><strong>Device encryption:</strong> Data on your device benefits from iOS hardware and file encryption when your device is locked.</li>
+                <li><strong>Transit encryption:</strong> Network requests to our Cloudflare proxy and the model provider use TLS.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>11. Data deletion</h2>
+            <ul>
+                <li><strong>Uninstall:</strong> Removing Paws from a device deletes that device&rsquo;s local SwiftData store, including AI chats stored there.</li>
+                <li><strong>Stop sharing:</strong> Owners can stop a CloudKit share from the pet screen. Participants can leave a shared profile.</li>
+                <li><strong>File import:</strong> Deleting an imported pet removes the local copy only; it does not delete another person&rsquo;s device or a live share you do not own.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>12. Contact us</h2>
+            <p>If you have questions about this Privacy Policy, please contact us:</p>
+            <p><a href="mailto:contact.pawsapp@gmail.com" style="color: var(--ios-blue); font-weight: 600;">contact.pawsapp@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div>
+                <a href="/">Home</a> &bull;
+                <a href="/privacy" style="color: var(--text-primary);">Privacy Policy</a> &bull;
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdfla/">Terms of Use (EULA)</a>
+            </div>
+            <div style="margin-top: 15px;">
+                &copy; 2026 Paws &mdash; Pet-care assistant for iOS
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

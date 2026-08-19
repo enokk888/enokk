@@ -1,0 +1,8 @@
+<h1>{{ trustedfile.title }}</h1>
+<img src={{ trustedfile.image }} alt="Enokk's {{ trustedfile.title }} library picture" />
+<p>{{ trustedfile.description }}</p>
+<p>{{ trustedfile.developer_notes }}</p>
+<p>published: {{ trustedfile.publication_date }}</p>
+<p>last updated: {{ trustedfile.last_update_date }}</p>
+<a href="{{ trustedfile.file.url }}" download>Download</a>
+<p>Trusted by {{ trustedfile.download_count }} users.</p>
