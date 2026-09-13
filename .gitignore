@@ -1,5 +1,6 @@
 htmlcov/
 .coverage
+.coveragerc
 
 db.sqlite3
 
