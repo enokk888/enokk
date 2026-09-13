@@ -7,6 +7,7 @@ from .models import TrustedFile
 
 
 def create_trusted_zip(title, days, download_count, is_available):
+    """Create a file from the TrustedFile model through SimpleUploadedFile()."""
     time = timezone.now() + datetime.timedelta(days=days)
     zip_file = SimpleUploadedFile(name="test.zip", content=b"PK\x03\x04 fake zip content", content_type="application/zip")
     image_file = SimpleUploadedFile(name="test.png", content=b"fake image content", content_type="image/png")
@@ -129,6 +130,6 @@ class TrustedFileModelTests(TestCase):
         self.assertIs(file.was_updated_recently(), True)
 
     def test_instance_returns_trusted_file_title(self):
-        """Returns the trusted file title as text definition of TrustedFile instance."""
+        """Returns the text representation of a TrustedFile instance."""
         file = create_trusted_zip("file", 1, 0, True)
         self.assertEqual(str(file), file.title)
