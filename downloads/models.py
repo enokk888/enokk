@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib import admin
 import datetime
 
 
@@ -13,6 +14,12 @@ class TrustedFile(models.Model):
     last_update_date = models.DateTimeField("latest update")
     download_count = models.IntegerField(default=0)
     is_available = models.BooleanField(default=True)
+
+    @admin.display(
+                boolean=True,
+                ordering="is_available",
+                description="is available"
+            )
 
     def was_published_recently(self):
         time = timezone.now()

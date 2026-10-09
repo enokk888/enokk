@@ -1,5 +1,6 @@
 import datetime
 from django.core.files.uploadedfile import SimpleUploadedFile
+from django.db.models import F
 from django.urls import reverse
 from django.utils import timezone
 from django.test import TestCase
@@ -97,6 +98,25 @@ class TrustedFileDetailViewTests(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 404)
 
+
+class TrustedFileDownloadViewTests(TestCase):
+    def test_download_unavailable_trustedfile(self):
+        """Returns 404 HTTP code when downloading an unavailable file."""
+        file = create_trusted_zip("unavailable file", 0, 0, False)
+        url = reverse("downloads:download-file", args=(file.id,))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 404)
+        self.assertEqual(file.download_count, 0)
+
+    def test_download_available_trustedfile(self):
+        """Returns 302 HTTP code when downloading an available file."""
+        file = create_trusted_zip("available file", 0, 0, True)
+        url = reverse("downloads:download-file", args=(file.id,))
+        response = self.client.get(url)
+        file.refresh_from_db()
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(file.download_count, 1)
+         
 
 class TrustedFileModelTests(TestCase):
     def test_was_published_recently_with_future_date(self):
